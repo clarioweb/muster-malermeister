@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.2px Helvetica; color: #5b6274}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.2px Helvetica; color: #a70014}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.2px Helvetica; color: #ad0018}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.2px Helvetica; color: #0f7001}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.2px Helvetica; color: #101318}
+    span.s1 {color: #20242d}
+    span.s2 {color: #a70014}
+    span.s3 {color: #0f7001}
+    span.s4 {color: #ad0018}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!</span>DOCTYPE html<span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;</span>html<span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;</span>head<span class="s1">&gt;</span></p>
+<p class="p3"><span class="s1">&lt;</span><span class="s2">meta </span>charset<span class="s1">="</span><span class="s3">utf-8</span><span class="s1">"&gt;</span></p>
+<p class="p4"><span class="s1">&lt;</span><span class="s2">meta </span><span class="s4">name</span><span class="s1">="</span>viewport<span class="s1">"</span><span class="s2"> </span><span class="s4">content</span><span class="s1">="</span>width=device-width, initial-scale=1.0<span class="s1">"&gt;</span></p>
+<p class="p5"><span class="s1">&lt;</span><span class="s2">title</span><span class="s1">&gt;</span>Albrecht CMS<span class="s1">&lt;/</span><span class="s2">title</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/</span>head<span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;</span>body<span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1">&lt;</span><span class="s2">
+// Load content from CMS
+async function loadContent() {
+try {
+const res = await fetch('/content/site.json');
+const data = await res.json();
+// Hero
+if (data.hero_title)
+document.querySelector('.hero-title em').textContent = data.hero title;
+document.querySelector( .hero title em ).textContent data.hero_title;
+if (data.hero_sub)
+document.querySelector('.hero-sub').textContent = data.hero_sub;
+// Phone — updates all instances at once
+if (data.phone) {
+document.querySelectorAll('[data-phone]')
+.forEach(el => el.textContent = data.phone);
+document.querySelectorAll('[data-phone-href]')
+.forEach(el => el.href = 'tel:' + data.phone.replace(/\D/g,
+''));
+}
+// Services — rebuild accordion
+if (data.services && data.services.length) {
+const acc = document.querySelector('.accordion');
+acc.innerHTML = '';
+data.services.forEach((s, i) => {
+const bullets = s.bullets
+? s.bullets.map(b => `<li>${b}</li>`).join('')
+: '';
+acc.innerHTML +=
+`
+<div class="acc-item ${i===0?'open':''}" onclick="toggleAcc(this)">
+<div class="acc-head">
+<div class="acc-head-left">
+<span class="acc-badge">${s.tag}</span>
+<span class="acc-title">${s.name}</span>
+</div>
+<div class="acc-toggle">+</div>
+</div>
+<div class="acc-body">
+<div class="acc-body-inner">
+${s.desc}
+<ul>${bullets}</ul>
+</div>
+</div>
+</div>`
+;
+});
+}
+// Testimonials
+if (data.testimonials && data.testimonials.length) {
+const grid = document.querySelector('.ref-cards');
+grid.innerHTML = '';
+data.testimonials.forEach(t => {
+grid.innerHTML +=
+`
+<div class="ref-card">
+<div class="ref-stars">★★★★★</div>
+<p class="ref-quote">"${t quote}"</p>
+<p class= ref quote > ${t.quote} </p>
+<div class="ref-person">
+<div class="ref-avatar">${t.initials}</div>
+<div><div class="ref-name">${t.name}</div>
+<div class="ref-loc">${t.role}</div></div>
+</div>
+</div>`
+;
+});
+}
+// Gallery
+if (data.gallery && data.gallery.length) {
+// baData is already defined — replace it and re-render
+baData.length = 0;
+data.gallery.forEach(g => baData.push(g));
+document.getElementById('ba-grid').innerHTML = '';
+renderGallery(); // call your existing gallery render function
+}
+} catch(e) {
+// Falls back to hardcoded content if JSON missing
+console.log('Content file not found, using defaults');
+}
+}
+loadContent();
+script </span><span class="s4">src</span><span class="s1">="</span>https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js<span class="s1">"&gt;&lt;/</span><span class="s2">script</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/</span>body<span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/</span>html<span class="s1">&gt;</span></p>
+</body>
+</html>

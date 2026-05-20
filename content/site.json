@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red32\green36\blue45;\red167\green0\blue20;\red16\green19\blue24;
+\red15\green112\blue1;}
+{\*\expandedcolortbl;;\cssrgb\c16863\c18824\c23137;\cssrgb\c72157\c3922\c9412;\cssrgb\c7843\c9412\c12157;
+\cssrgb\c0\c50196\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22\fsmilli11211 \cf2 \{\
+\cf3 "hero_title"\cf4 : \cf5 "Ihr Berliner Malerteam \'97 seit 26 Jahren."\cf2 ,\
+\cf3 "hero_sub"\cf4 : \cf5 "Harry Albrecht und sein Team versch\'f6nern Wohnungen, H\'e4user und Gewerb\
+\cf3 "phone"\cf4 : \cf5 "030 \'96 775 39 53"\cf2 ,\
+\cf3 "email"\cf4 : \cf5 "info@albrecht-malermeister.de"\cf2 ,\
+\cf3 "years"\cf4 : \cf5 "26+"\cf2 ,\
+\cf3 "services"\cf4 : \cf2 [
+\fs24 \cf0 \page 
+\fs22\fsmilli11211 \cf3 services \cf4 : \cf2 [\
+\{\
+\cf3 "name"\cf4 : \cf5 "Renovier- & Malerarbeiten"\cf2 ,\
+\cf3 "tag"\cf4 : \cf5 "Innen"\cf2 ,\
+\cf3 "desc"\cf4 : \cf5 "Professionelle Innenanstriche f\'fcr Wohnungen, H\'e4user, B\'fcros und Gewerb\
+\cf3 "bullets"\cf4 : \cf2 [\cf5 "W\'e4nde, Decken, T\'fcren, Fenster & Heizk\'f6rper"\cf2 ,\cf4  \cf5 "Spachtel- und Lasur\
+\cf2 \},\
+\{\
+\cf3 "name"\cf4 : \cf5 "Tapeten & Gestaltung"\cf2 ,\
+\cf3 "tag"\cf4 : \cf5 "Innen"\cf2 ,\
+\cf3 "desc"\cf4 : \cf5 "Von der klassischen Raufasertapete bis zur hochwertigen Designtapete.\
+\cf3 "bullets"\cf4 : \cf2 [\cf5 "Rauhfaser, Vlies, Natur- und Fototapeten"\cf2 ,\cf4  \cf5 "Entfernen alter Tapet\
+\cf2 \}\
+],\
+\cf3 "testimonials"\cf4 : \cf2 [\
+\{\
+\cf3 "name"\cf4 : \cf5 "Sabine K."\cf2 ,\
+\cf3 "role"\cf4 : \cf5 "Privatkunde \'b7 Lichtenrade"\cf2 ,\
+\cf3 "initials"\cf4 : \cf5 "SK"\cf2 ,\
+\cf3 "quote"\cf4 : \cf5 "Das Team Albrecht hat unsere komplette 4-Zimmer-Wohnung gestrichen \'97\
+\cf2 \}\
+],\
+\cf3 "gallery"\cf4 : \cf2 [\
+\{\
+\cf3 "label"\cf4 : \cf5 "Wohnzimmer \'b7 Lichtenrade"\cf2 ,\
+\cf3 "before"\cf4 : \cf5 "/images/uploads/wz-vorher.jpg"\cf2 ,\
+\cf3 "after"\cf4 : \cf5 "/images/uploads/wz-nachher.jpg"\
+\cf2 \}\
+]\
+\}}
